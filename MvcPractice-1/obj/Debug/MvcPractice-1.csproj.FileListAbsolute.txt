@@ -51,3 +51,6 @@ G:\VS 2017 Project\#MVC\MvcPractice-1\MvcPractice-1\bin\EntityFramework.dll
 G:\VS 2017 Project\#MVC\MvcPractice-1\MvcPractice-1\bin\EntityFramework.SqlServer.dll
 G:\VS 2017 Project\#MVC\MvcPractice-1\MvcPractice-1\bin\EntityFramework.xml
 G:\VS 2017 Project\#MVC\MvcPractice-1\MvcPractice-1\bin\EntityFramework.SqlServer.xml
+G:\VS 2017 Project\#MVC\MvcPractice-1\MvcPractice-1\bin\BusinessLayer.dll
+G:\VS 2017 Project\#MVC\MvcPractice-1\MvcPractice-1\bin\BusinessLayer.pdb
+G:\VS 2017 Project\#MVC\MvcPractice-1\MvcPractice-1\bin\BusinessLayer.dll.config

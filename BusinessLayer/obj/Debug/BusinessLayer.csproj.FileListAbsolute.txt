@@ -1,0 +1,12 @@
+G:\VS 2017 Project\#MVC\MvcPractice-1\BusinessLayer\bin\Debug\BusinessLayer.dll
+G:\VS 2017 Project\#MVC\MvcPractice-1\BusinessLayer\bin\Debug\BusinessLayer.pdb
+G:\VS 2017 Project\#MVC\MvcPractice-1\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+G:\VS 2017 Project\#MVC\MvcPractice-1\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+G:\VS 2017 Project\#MVC\MvcPractice-1\BusinessLayer\obj\Debug\BusinessLayer.dll
+G:\VS 2017 Project\#MVC\MvcPractice-1\BusinessLayer\obj\Debug\BusinessLayer.pdb
+G:\VS 2017 Project\#MVC\MvcPractice-1\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+G:\VS 2017 Project\#MVC\MvcPractice-1\BusinessLayer\bin\Debug\EntityFramework.dll
+G:\VS 2017 Project\#MVC\MvcPractice-1\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+G:\VS 2017 Project\#MVC\MvcPractice-1\BusinessLayer\bin\Debug\EntityFramework.xml
+G:\VS 2017 Project\#MVC\MvcPractice-1\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+G:\VS 2017 Project\#MVC\MvcPractice-1\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
