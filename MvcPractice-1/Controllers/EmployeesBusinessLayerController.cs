@@ -88,12 +88,102 @@ namespace MvcPractice_1.Controllers
         }
 
         [HttpGet]
+        [ActionName("Edit")]
         public ActionResult Edit(int id)
         {
-          Employee aEmployee =  employeeBusinessLayer.Employees.Single(emp => emp.EmployeeId == id);
-          return View(aEmployee);
+            Employee aEmployee = employeeBusinessLayer.Employees.Single(emp => emp.EmployeeId == id);
+            return View(aEmployee);
         }
-        
 
+        /*
+         //This is the include method
+               [HttpPost]
+           [ActionName("Edit")]
+           public ActionResult Edit_Post(int id)
+           {
+               Employee aEmployee = employeeBusinessLayer.Employees.Single(emp => emp.EmployeeId == id);
+
+               UpdateModel(aEmployee,new string[]{"EmployeeId","EmployeeCity","EmployeeGender", "DateOfBirth" });
+               if (ModelState.IsValid)
+               {
+                   employeeBusinessLayer.UpdateEmployee(aEmployee);
+                   return RedirectToAction("Index");
+               }
+
+               return View(aEmployee);
+           }*/
+
+        //Exclude method
+        /*
+        [HttpPost]
+        [ActionName("Edit")]
+        public ActionResult Edit_Post(int id)
+        {
+            Employee aEmployee = employeeBusinessLayer.Employees.Single(emp => emp.EmployeeId == id);
+            TryUpdateModel(aEmployee,null,null,new string[]{"EmployeeName"});
+            if (ModelState.IsValid)
+            {
+                employeeBusinessLayer.UpdateEmployee(aEmployee);
+                return RedirectToAction("Index");
+            }
+
+            return View(aEmployee);
+        }*/
+
+        //Bind method
+        /*
+                [HttpPost]
+                [ActionName("Edit")]
+                public ActionResult Edit_Post([Bind(Exclude = "EmployeeName")] Employee aEmployee)
+                {
+                    aEmployee.EmployeeName = employeeBusinessLayer.Employees
+                        .Single(emp => emp.EmployeeId == aEmployee.EmployeeId).EmployeeName;
+                    if (ModelState.IsValid)
+                    {
+                        employeeBusinessLayer.UpdateEmployee(aEmployee);
+                        return RedirectToAction("Index");
+                    }
+
+                    return View(aEmployee);
+                }*/
+        // Using Interface
+        [HttpPost]
+        [ActionName("Edit")]
+        public ActionResult Edit_Post(int id)
+        {
+            Employee aEmployee = employeeBusinessLayer.Employees.Single(emp => emp.EmployeeId == id);
+            TryUpdateModel<IEmploye>(aEmployee);
+            if (ModelState.IsValid)
+            {
+                employeeBusinessLayer.UpdateEmployee(aEmployee);
+                return RedirectToAction("Index");
+            }
+
+            return View(aEmployee);
+        }
+
+        [HttpGet]
+        [ActionName("Delete")]
+        public ActionResult Delete_Get(int id)
+        {
+            Employee aEmployee = new Employee();
+            aEmployee = employeeBusinessLayer.Employees.Single(emp => emp.EmployeeId == id);
+            return View(aEmployee);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult Delete_Post(int id)
+        {
+            employeeBusinessLayer.DeleteEmploye(id);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Details(int id)
+        {
+            Employee aEmployee = new Employee();
+            aEmployee = employeeBusinessLayer.Employees.Single(emp => emp.EmployeeId == id);
+            return View(aEmployee);
+        }
     }
 }

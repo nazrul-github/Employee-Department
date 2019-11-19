@@ -8,7 +8,14 @@ using System.Data.SqlClient;
 
 namespace BusinessLayer
 {
-    public class Employee
+    public interface IEmploye
+    {
+        int EmployeeId { get; set; }
+        string EmployeeGender { get; set; }
+        string EmployeeCity { get; set; }
+        DateTime? DateOfBirth { get; set; }
+    }
+    public class Employee: IEmploye
     {
         public int EmployeeId { get; set; }
         [Required]
@@ -19,6 +26,6 @@ namespace BusinessLayer
         public string EmployeeCity { get; set; }
         [Required]
         public DateTime? DateOfBirth { get; set; }
-
     }
+    
 }

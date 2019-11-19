@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using MvcPractice_1.Models;
 
 namespace MvcPractice_1
 {
@@ -13,7 +12,6 @@ namespace MvcPractice_1
     {
         protected void Application_Start()
         {
-            Database.SetInitializer<EmployeeContext>(null);
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
